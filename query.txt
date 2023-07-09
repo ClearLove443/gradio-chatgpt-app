@@ -22,3 +22,5 @@ Plot the pie chart of countries showing for each the gdp
 
 绘制显示每个GDP的国家的折线图，根据GDP排序
 Plot the line chart of countries showing for each the gdp, sorted by GDP asc
+
+What did the president say about Ketanji Brown Jackson?
