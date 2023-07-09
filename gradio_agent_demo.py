@@ -82,7 +82,6 @@ tools.append(
         description="useful for when you need to answer questions don't about countries and Ketanji Brown Jackson",
     )
 )
-from typing import List
 
 agent = initialize_agent(
     tools,
@@ -91,17 +90,31 @@ agent = initialize_agent(
     verbose=True,
 )
 
+import uuid
+
 import gradio as gr
 from loguru import logger
 
+from helper.cache import RedisCache
+
+cache = RedisCache()
+
 
 async def make_completion(query):
+    _prompt_id = str(uuid.uuid4())
+    logger.info(f"Prompt ID: {_prompt_id}")
     with get_openai_callback() as cb:
-        res = agent.run(query)
+        res = cache.get(query)
+        if res is not None:
+            logger.info("Using cached response")
+
+        else:
+            res = agent.run(query)
+            cache.set(query, res)
+
         print(res)
         print(cb)
-
-    return str(res)
+        return str(res)
 
 
 async def predict(input, history):
