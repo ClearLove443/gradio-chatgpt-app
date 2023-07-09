@@ -1,0 +1,3 @@
+pandasai
+gradio
+loguru==0.7.0

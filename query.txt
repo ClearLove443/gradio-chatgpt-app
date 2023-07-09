@@ -1,0 +1,24 @@
+Which are the 5 happiest countries?
+最幸福的五个国家是哪些？
+
+What is the sum of the GDPs of the 2 unhappiest countries?
+最不幸福的两个国家的GDP总和是多少？
+
+Which is the unhappiest countries?
+Which is the unhappiest country?
+
+Plot the histogram of countries showing for each the gdp
+
+# 错误结果
+绘制显示每个国家的GDP的直方图
+
+# 正确结果
+绘制显示每个GDP的国家的直方图，为每个栏使用不同的颜色
+Plot the histogram of countries showing for each the gdp, using different colors for each bar
+
+
+绘制显示每个GDP的国家的饼状图
+Plot the pie chart of countries showing for each the gdp
+
+绘制显示每个GDP的国家的折线图，根据GDP排序
+Plot the line chart of countries showing for each the gdp, sorted by GDP asc
